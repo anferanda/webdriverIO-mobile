@@ -63,7 +63,7 @@ exports.config = {
         "appium:app"               : path.join(process.cwd(),'./test/apk/Diet_meal.apk'),
         "appium:appPackage"        : "com.fghilmany.dietmealapp",
         "appium:appActivity"       : "com.fghilmany.dietmealapp.ui.main.MainActivity",
-        "appium:noReset"           : false,
+        "appium:noReset"           : true,
         "appium:forceAppLaunch"    : true,
     
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
@@ -109,7 +109,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://127.0.0.1',
+    baseUrl: 'http:/localhost:4728',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -130,7 +130,7 @@ exports.config = {
             'appium',
         {
             args : {
-                address : '127.0.0.1',
+                address : 'localhost',
                 port : 4728,
             },
             logPath : './log',
